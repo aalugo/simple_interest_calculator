@@ -4,13 +4,29 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class = "maindiv">
+            <h1>Simple Interest Calculator</h1>
+            Amount <input type="number"  id="principal">  
+            <p>Interest Rate <input type="range" min="1" max="20" step="0.25" value="10.25" onchange="rateVal(this.value);" ><span><output id="rate" >10.25</output>%</span></p>
+            <p>No. of Years <select id="years">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option> 
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option> 
+                </select></p>
+            <p><button onclick="compute()"> Compute Interest</button></p>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            <span id="result"></span>
+            <p><footer>&copy; Everyone Can Get Rich</footer></p>
+        </div>
+        
+        
 
-        <button onclick="compute()"> Compute </button>
     </body>
 </html>
